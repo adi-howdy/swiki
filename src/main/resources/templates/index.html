@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>MakeUp-Obsession</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link
+	href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:300,300i,400,400i,700,700i"
+	rel="stylesheet">
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet" media="screen">
+<link th:href="@{/css/mystyle.css}" rel="stylesheet" media="screen">
+</head>
+<body id="home">
+	<section class="container">
+		<div class="content row">
+			<div class="content row">
+				<div class="col-lg-12">
+					<header class="clearfix">
+						<section id="branding">
+							<a href="index.php"><img
+								src="images/misc/ralogo_monogram.png"
+								alt="logo for MakeupObsession"></a>
+						</section>
+						<!--branding-->
+
+						<nav class="navbar navbar-inverse">
+							<ul class="nav navbar-nav">
+								<li><a href="index.php">Home</a></li>
+								<li class="dropdown_makeup"><a href="#"
+									class="dropdown-toggle" data-toggle="dropdown">Makup <span
+										class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu"
+										aria-labelledby="dropdownMenu">
+										<li><a tabindex="-1" href="artists.php">All artists</a></li>
+										<li><a tabindex="-1" href="artists.php#Barot_Bellingham">Barot
+												Bellingham</a></li>
+										<li><a tabindex="-1" href="artists.php#Gerard_Donahue">Gerard
+												Donahue</a></li>
+										<li><a tabindex="-1" href="artists.php#Jonathan_Ferrar">Jonathan
+												Ferrar</a></li>
+										<li><a tabindex="-1" href="artists.php#Lorenzo_Garcia">Lorenzo
+												Garcia</a></li>
+										<li><a tabindex="-1" href="artists.php#Hillary_Goldwynn">Hillary
+												Goldwynn</a></li>
+										<li><a tabindex="-1" href="artists.php#Hassum_Harrod">Hassum
+												Harrod</a></li>
+										<li><a tabindex="-1" href="artists.php#Jennifer_Jerome">Jennifer
+												Jerome</a></li>
+										<li><a tabindex="-1" href="artists.php#LaVonne_LaRue">LaVonne
+												LaRue</a></li>
+										<li><a tabindex="-1" href="artists.php#Riley_Rewington">Riley
+												Rewington</a></li>
+										<li><a tabindex="-1" href="artists.php#Constance_Smith">Constance
+												Smith</a></li>
+										<li><a tabindex="-1" href="artists.php#Xhou_Ta">Xhou
+												Ta</a></li>
+										<li><a tabindex="-1" href="artists.php#Richard_Tweed">Richard
+												Tweed</a></li>
+									</ul> <!--dropdown menu--></li>
+								<li><a href="schedule.php">Schedule</a></li>
+								<li><a href="register">Register</a></li>
+								<li><a href="about.html">About Us</a></li>
+							</ul>
+							<!--nav-->
+						</nav>
+						<!--navbar-->
+
+						<!--modal-->
+						<section id="modal" class="modal fade">
+							<div class="modal-body">
+								<img id="modalimage" src="" alt="Modal photo">
+							</div>
+						</section>
+						<!--modal-->
+					</header>
+					<!--header-->
+				</div>
+				<!--column-->
+			</div>
+			<!--content-->
+			<div id="myCarousel" class="carousel slide">
+
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+					<li data-target="#myCarousel" data-slide-to="4"></li>
+				</ol>
+				<section class="carousel-inner">
+					<div class="item active">
+						<img src="images/carousel/seattle_skyline.jpg"
+							alt="Photo of Seattle Skyine">
+					</div>
+					<div class="item">
+						<img src="images/carousel/jewelry_workshop.jpg"
+							alt="Photo of jewelry_workshop">
+					</div>
+					<div class="item">
+						<img src="images/carousel/painting_workshop.jpg"
+							alt="Photo of painting_workshop">
+					</div>
+					<div class="item">
+						<img src="images/carousel/pottery_workshop.jpg"
+							alt="Photo of pottery_workshop">
+					</div>
+					<div class="item">
+						<img src="images/carousel/quicksketch_workshop.jpg"
+							alt="Photo of quicksketch_workshop">
+					</div>
+				</section>
+				<!--carousel innert-->
+				<a href="#myCarousel" class="left carousel-control"
+					data-slide="prev"><span
+					class="glyphicon glyphicon-chevron-left"></span></a> <a
+					href="#myCarousel" class="right carousel-control" data-slide="next"><span
+					class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			<!--mycarousel-->
+			<section class="main col col-lg-8">
+				<article class="intro">
+					<h2>Contemporary Art Conference</h2>
+					<p>Join over 500 hundred of the most creative and brilliant
+						minds of art colleges all around the world for five days of
+						lectures by world-renowned art scholars and artists, and seven
+						days and nights of gallery exhibits featuring the best in
+						contemporary art, including painting, sculpture, and more, in the
+						beautiful halls of Hotel Contempo in the heart of Seattle.</p>
+					<p class="hidden-sm">The Roux Academy's annual conference and
+						exhibit is designed to foster a close-knit relationship amongst
+						artists at various universities around the world. No matter what
+						school you attend - if you're an art student at an accredited art
+						school anywhere in the world, you can attend the conference. But
+						sign up early, as this not-to-miss conference sells out quickly,
+						and the waiting list is long. In addition, art students are
+						encouraged to send in works from their school portfolios to be
+						considered for hanging in the CAC exhibit halls, as well as to be
+						selected as a Featured Artist.</p>
+				</article>
+				<!--intro-->
+				<article class="abouttheartists">
+					<h2>About the artists</h2>
+					<p>The Roux Academy gets thousands of submissions every year
+						for artists interesting in participating in the CAC exhibits, and
+						selects approximately 200 distinct pieces of contemporary art for
+						display in their collective exhibit.</p>
+					<p>In addition, 12 individuals are honored as Featured Artists
+						- each being granted his or her own exhibit hall to display entire
+						collections or themed pieces. Each Featured Artist has an
+						opportunity to speak at the conference to share his or her vision,
+						perspective, and techniques with conference attendees. It is truly
+						an honor to be a CAC Featured Artist and many past students
+						artists who were featured at CAC have gone on to brilliant careers
+						in art.</p>
+
+					<?php include "snippet-artistphotogrid.php"; ?>
+					<a href="artists.php" class="btn btn-primary">About the Makeup</a>
+				</article>
+				<!--about artitcle-->
+				<article class="aboutthevenue media">
+					<h2>About the venue</h2>
+					<div class="media-body">
+						<a class="pull-right" href="gallery.php"><img
+							src="images/hotels/contempo.jpg" alt="Photos of Hotel Contempo"></a>
+						<p>All CAC speaking events and gallery exhibits take place
+							inside Hotel Contempo, located at 309 1st Avenue, in Downtown
+							Seattle. Just a walk to the beach, the Space Needle, and a
+							diverse sampling of restaurants and shopping makes the venue a
+							much sought-after location for gatherings and conferences, year
+							after year.</p>
+						<p>Hotel Contempo is the perfect spot for a gathering of
+							modern artists. Not only are the conference rooms and halls
+							decked with breathtaking contemporary art and sculptures, but the
+							individual rooms are as unique as the renowned artists who were
+							commissioned to decorate them. From the Ross Monroe Purple suite
+							filled wall to wall with paintings in his signature palette of
+							violet and lavender to the Tess Lessinger Sculpted Universe
+							suite, with dozens of original sculptures, including the
+							bronze-casted toilet, visitors are sure to be intrigued and
+							comforted during their stay at Hotel Contempo. For those who opt
+							to stay at another location, there is certainly no shortage of
+							hotels in Downtown Seattle. Ranging from shabby chic to the
+							ultimate in sophistication - there is a something to suit
+							everyone's taste.</p>
+					</div>
+				</article>
+			</section>
+			<section class="sidebar col col-lg-4">
+				<aside class="register">
+					<h2>Registration info</h2>
+					<p>
+						Fill <a href="register">our registration form</a> and we'll let you
+						know when we begin the registration process. Then, get ready for
+						the best conference in contemporary art.
+					</p>
+					<a href="register" class="btn btn-danger">Register now</a>
+					</p>
+				</aside>
+			</section>
+		</div>
+	</section>
+	<script src="_/js/bootstrap.js"></script>
+	<script src="_/js/myscript.js"></script>
+</body>
+</html>
