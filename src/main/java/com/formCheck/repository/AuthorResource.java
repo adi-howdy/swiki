@@ -22,21 +22,28 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.formCheck.model.Author;
+import com.formCheck.model.Scheduler;
 import com.formCheck.service.AuthorService;
+import com.formCheck.service.SchedulerService;
 
 @Controller
 public class AuthorResource {
 	
 	
 	@Autowired
-	private AuthorRepository authorRepository;	
+	private AuthorRepository authorRepository;
+	private SchedulerRepository schedulerRepository;
 	
 	private AuthorService authorService;
+	private SchedulerService schedulerService;
 	
 	@Autowired
-	public AuthorResource(AuthorService authorService) {
-		this.authorService = authorService;
+	public AuthorResource(SchedulerService schedulerService) {
+		super();
+		this.schedulerService = schedulerService;
 	}
+
+	
 	
 	/*
 	@RequestMapping(value="/about", method = RequestMethod.GET)
@@ -66,6 +73,8 @@ public class AuthorResource {
 		return "authors";
 	}
 	*/
+	
+	
 	
 	@RequestMapping(value="/register", method = RequestMethod.GET)
 	public String showForm(ModelMap model, Author author){
@@ -129,6 +138,8 @@ public class AuthorResource {
 		return "redirect:/registerSuccess/"+author.getId();
 
 	}
+	
+	
 	
 	@RequestMapping(value ="/editCustomer/{id}")
 	public String editRegistration(@PathVariable int id, ModelMap m){

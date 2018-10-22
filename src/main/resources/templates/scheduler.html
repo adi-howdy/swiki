@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link
+	href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:300,300i,400,400i,700,700i"
+	rel="stylesheet">
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet" media="screen">
+<link th:href="@{/css/mystyle.css}" rel="stylesheet" media="screen">
+<title>Insert title here</title>
+</head>
+<body>
+<form  action="#" th:action="@{/scheduler}" th:object="${scheduler}" method="post" >
+  <div class="form-group">
+    <label for="date">date</label>
+    <input type="date" class="form-control" id="fordate" th:field="*{date}" placeholder="date">
+  </div>
+  <div class="form-group">
+    <label for="forshift">shift</label>
+    <input type="text" class="form-control" th:field="*{shift}" placeholder="shift">
+  </div>
+  <div class="form-group">
+    <label for="forshift">location</label>
+    <input type="text" class="form-control" th:field="*{location}" placeholder="location">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
