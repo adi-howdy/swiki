@@ -15,6 +15,7 @@ public class AuthorService {
 	private AuthorRepository authorRepository;
 	
 	public Author saveAuthor(Author author){
+		System.out.print("customer email123: " + author.getEmail() + "\n");
 		return authorRepository.save(author);
 	}
 	

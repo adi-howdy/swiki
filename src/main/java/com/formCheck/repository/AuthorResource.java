@@ -38,9 +38,9 @@ public class AuthorResource {
 	private SchedulerService schedulerService;
 	
 	@Autowired
-	public AuthorResource(SchedulerService schedulerService) {
+	public AuthorResource(AuthorService authorService) {
 		super();
-		this.schedulerService = schedulerService;
+		this.authorService = authorService;
 	}
 
 	
@@ -133,7 +133,9 @@ public class AuthorResource {
 			System.out.println("has errors");
 			return "register";
 		}
+		System.out.print("customer name: " + author.getName() + "\n");
 		authorService.saveAuthor(author);
+		System.out.print("customer email: " + author.getEmail() + "\n");
 		
 		return "redirect:/registerSuccess/"+author.getId();
 
