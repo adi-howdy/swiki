@@ -1,10 +1,13 @@
 package com.formCheck.repository;
 
 import java.net.URI;
+import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -25,6 +28,7 @@ import com.formCheck.model.Author;
 import com.formCheck.model.Scheduler;
 import com.formCheck.service.AuthorService;
 import com.formCheck.service.SchedulerService;
+import com.mysql.jdbc.log.Log;
 
 @Controller
 public class AuthorResource {
@@ -32,9 +36,14 @@ public class AuthorResource {
 	
 	@Autowired
 	private AuthorRepository authorRepository;
+	
+	@Autowired
 	private SchedulerRepository schedulerRepository;
 	
+	@Autowired
 	private AuthorService authorService;
+	
+	@Autowired
 	private SchedulerService schedulerService;
 	
 	@Autowired
@@ -78,7 +87,6 @@ public class AuthorResource {
 	
 	@RequestMapping(value="/register", method = RequestMethod.GET)
 	public String showForm(ModelMap model, Author author){
-		System.out.print("FUCK IT" + "/n");
 		Author author1 = new Author();
 		model.addAttribute("customer", author1);
 		return "register";
@@ -133,10 +141,7 @@ public class AuthorResource {
 			System.out.println("has errors");
 			return "register";
 		}
-		System.out.print("customer name: " + author.getName() + "\n");
 		authorService.saveAuthor(author);
-		System.out.print("customer email: " + author.getEmail() + "\n");
-		
 		return "redirect:/registerSuccess/"+author.getId();
 
 	}
@@ -164,6 +169,31 @@ public class AuthorResource {
 		authorService.saveAuthor(author);
 		
 		return "redirect:/registerSuccess/"+author.getId();
+	}
+	
+	@ModelAttribute("shift")
+	public List<String> shiftInitializer(){
+		List<String> shift = new ArrayList<String>();
+		List<String> shift123 = schedulerService.findShiftAll();
+		for(String str: shift123)
+		{
+			shift.add(str);
+		}
+		
+		return shift;
+	}
+	
+
+	@ModelAttribute("date")
+	public List<Date> dateInitializer(){
+		List<Date> date = new ArrayList<Date>();
+		List<Date> date123 = schedulerService.findDateAll();
+		for(Date date_value: date123)
+		{
+			date.add(date_value);
+		}
+		
+		return date;
 	}
 	
 	

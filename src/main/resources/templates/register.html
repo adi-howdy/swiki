@@ -128,18 +128,17 @@
 							<section class="row">
 								<label class="col col-lg-4 control-label">Date</label>
 								<div class="controls col col-lg-8">
-									<input class="col col-lg-8" type="date" th:field="*{date}"
-										name="date" id="date" autocomplete="off" />
+									<select type="date" th:field="*{date}"
+										name="date" id="date" autocomplete="off" >
+										<option th:each="date : ${date}" th:value="${date}" th:text="${date}"></option>
+									</select>
 								</div>
 							</section>
 							<section class="row">
 								<label class="col col-lg-4 control-label" for="reference">Shift</label>
 								<div class="controls col col-lg-8">
 									<select name="reference" id="reference" th:field=*{shift}>
-										<option value="Morning 7-9">Morning 7-9</option>
-										<option value="Noon 10-12">Noon 10-12</option>
-										<option value="Late Afternoon 1-3">Late Afternoon 1-3</option>
-										<option value="Evening 4-6">Evening 4-6</option>
+										<option th:each="shift : ${shift}" th:value="${shift}" th:text="${shift}"></option>
 									</select>
 								</div>
 								<!-- controls -->
